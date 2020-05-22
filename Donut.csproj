@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;netcoreapp2.2</TargetFrameworks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Build\Templates\Project.txt" />
+    <None Remove="Lex\Templates\DonutContext.txt" />
+    <None Remove="Lex\Templates\Donutfile.txt" />
+    <None Remove="Lex\Templates\FeatureGenerator.txt" />
+    <None Remove="Lex\Templates\MapReduceAggregate.txt" />
+    <None Remove="Lex\Templates\MapReduceMapper.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Build\Templates\Project.txt" />
+    <EmbeddedResource Include="Lex\Templates\DonutContext.txt" />
+    <EmbeddedResource Include="Lex\Templates\Donutfile.txt" />
+    <EmbeddedResource Include="Lex\Templates\FeatureGenerator.txt" />
+    <EmbeddedResource Include="Lex\Templates\MapReduceAggregate.txt" />
+    <EmbeddedResource Include="Lex\Templates\MapReduceMapper.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0-preview2-35157" />
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="2.8.2" />
+    <PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="2.2.0-preview2-35157" />
+    <PackageReference Include="NetMQ" Version="4.0.0.1" />
+    <PackageReference Include="StackExchange.Redis.Extensions.JilCore" Version="1.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Netlyt.Data\Netlyt.Data.csproj" />
+    <ProjectReference Include="..\Netlyt.Interfaces\Netlyt.Interfaces.csproj" />
+  </ItemGroup>
+</Project>
