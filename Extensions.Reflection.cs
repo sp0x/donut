@@ -5,7 +5,7 @@ using System.Reflection;
 using Donut.Orion;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Netlyt.Interfaces.Data;
+using Donut.Data;
 
 namespace Donut
 {

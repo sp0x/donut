@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Threading.Tasks.Dataflow;
+using Donut.Blocks;
 using Donut.Encoding;
 using Donut.Integration;
 using Donut.Lex;
@@ -14,17 +15,14 @@ using Donut.Lex.Parsing;
 using Donut.Parsing.Tokenizers;
 using MongoDB.Bson;
 using MongoDB.Driver;
-using Netlyt.Interfaces.Blocks;
-using Netlyt.Interfaces.Data;
+
 
 namespace Donut.Data
 {
-    /// <summary>   A data import task which reads the input source, registers an api data type for it and fills the data in a new collection. </summary>
-    ///
+    /// <summary>
+    /// A data import task which reads the input source, registers an api data type for it and fills the data in a new collection. </summary>
     /// <remarks>   Vasko, 14-Dec-17. </remarks>
-    ///
     /// <typeparam name="T">    Generic type parameter for that data that will be read. Use ExpandoObject if not sure. </typeparam>
-
     public class DataImportTask<T> where T : class
     {
         private DataImportTaskOptions _options;

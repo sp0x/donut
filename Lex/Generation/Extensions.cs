@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Donut.Lex.Data;
 using Donut.Lex.Expressions;
 using Donut.Lex.Generators;
-using Netlyt.Interfaces;
+using Donut.Interfaces;
 
 namespace Donut.Lex.Generation
 {

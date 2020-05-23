@@ -1,4 +1,4 @@
-﻿using Netlyt.Interfaces;
+﻿using Donut.Interfaces;
 
 namespace Donut.Lex.Generators
 {

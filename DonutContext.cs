@@ -7,10 +7,9 @@ using Donut.Caching;
 using Donut.Data;
 using Donut.Encoding;
 using Donut.Integration;
+using Donut.Interfaces;
 using MongoDB.Bson;
 using MongoDB.Driver;
-using Netlyt.Interfaces;
-using Netlyt.Interfaces.Data;
 using StackExchange.Redis;
 
 namespace Donut

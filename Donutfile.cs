@@ -4,8 +4,7 @@ using System.Threading.Tasks.Dataflow;
 using Donut.Blocks;
 using Donut.Caching;
 using Donut.Encoding;
-using Netlyt.Interfaces;
-using Netlyt.Interfaces.Blocks;
+using Donut.Interfaces;
 
 namespace Donut
 {

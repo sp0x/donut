@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using Donut.Data;
+using Donut.Interfaces;
+using Donut.Interfaces.Models;
 using Donut.Source;
-using Netlyt.Interfaces;
-using Netlyt.Interfaces.Models;
 
 namespace Donut.Integration
 {

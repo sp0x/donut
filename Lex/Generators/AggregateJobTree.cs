@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using Donut.Lex.Data;
-using Netlyt.Interfaces;
+using Donut.Interfaces;
 
 namespace Donut.Lex.Generators
 {

@@ -4,8 +4,6 @@ using Donut.Data;
 using MongoDB.Bson;
 using MongoDB.Driver;
 using MongoDB.Driver.Linq;
-using Netlyt.Interfaces;
-using Netlyt.Interfaces.Data;
 
 namespace Donut
 {

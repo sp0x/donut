@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Dynamic;
 using Donut.Caching;
-using Netlyt.Interfaces;
-using Netlyt.Interfaces.Blocks;
-using Netlyt.Interfaces.Models;
+using Donut.Interfaces.Models;
 using StackExchange.Redis;
 using StackExchange.Redis.Extensions.Core;
 using StackExchange.Redis.Extensions.Jil;

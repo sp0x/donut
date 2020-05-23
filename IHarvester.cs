@@ -4,10 +4,10 @@ using System.Dynamic;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Threading.Tasks.Dataflow;
+using Donut.Blocks;
+using Donut.Data;
 using Donut.Integration;
-using Netlyt.Interfaces;
-using Netlyt.Interfaces.Blocks;
-using Netlyt.Interfaces.Models;
+using Donut.Interfaces.Models;
 
 namespace Donut
 {
@@ -23,7 +23,6 @@ namespace Donut
         TimeSpan ElapsedTime();
         void LimitEntries(uint max);
         void LimitShards(uint max);
-        Task<HarvesterResult> ReadAll(ITargetBlock<ExpandoObject> target, CancellationToken? cancellationToken = null);
         void Reset();
         Task<HarvesterResult> Run(CancellationToken? cancellationToken = null);
         IHarvester<TDocument> SetDestination(IFlowBlock<TDocument> dest);

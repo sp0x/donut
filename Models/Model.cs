@@ -5,8 +5,8 @@ using System.Linq;
 using System.Reflection;
 using Donut.Data;
 using Donut.Lex.Data;
-using Netlyt.Interfaces;
-using Netlyt.Interfaces.Models;
+using Donut.Interfaces;
+using Donut.Interfaces.Models;
 
 namespace Donut.Models
 {

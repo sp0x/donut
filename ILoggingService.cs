@@ -1,8 +1,7 @@
 ﻿using System.Collections.Generic;
 using Donut.Data;
-using Netlyt.Data.ViewModels;
-using Netlyt.Interfaces.Cloud;
-using Netlyt.Interfaces.Models;
+using Donut.Interfaces.Cloud;
+using Donut.Interfaces.Models;
 using Newtonsoft.Json.Linq;
 
 namespace Donut

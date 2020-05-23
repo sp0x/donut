@@ -7,9 +7,9 @@ using System.Threading.Tasks.Dataflow;
 using Donut.Data.Format;
 using Donut.Encoding;
 using Donut.Integration;
+using Donut.Interfaces;
+using Donut.Interfaces.Models;
 using Donut.Source;
-using Netlyt.Interfaces;
-using Netlyt.Interfaces.Models;
 
 namespace Donut.IntegrationSource
 {

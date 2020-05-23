@@ -2,19 +2,17 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using LumenWorks.Framework.IO.Csv;
-using Netlyt.Interfaces.Blocks;
 
 namespace Donut.Blocks
 {
     /// <summary>
     /// 
     /// </summary>
-    public class EntityDataImporter 
-        : Netlyt.Interfaces.Blocks.BaseFlowBlock<IntegratedDocument, IntegratedDocument>
+    public class EntityDataImporter : BaseFlowBlock<IntegratedDocument, IntegratedDocument>
     {
         private string _inputFileName;
         private Func<string[], IntegratedDocument, bool> _matcher;
-        public char Delimiter { get; set; } 
+        public char Delimiter { get; set; }
         private Action<string[], IntegratedDocument> _joiner;
         private Func<string[], string> _inputMapper;
         private FileStream _fs;
@@ -22,7 +20,7 @@ namespace Donut.Blocks
         public List<string[]> CacheItems { get; private set; }
         public Dictionary<string, string[]> MappedItems { get; private set; }
 
-        public EntityDataImporter(string inputFile, bool relative = false, bool map = false) 
+        public EntityDataImporter(string inputFile, bool relative = false, bool map = false)
             : base(procType: BlockType.Transform)
         {
             Delimiter = ',';
@@ -30,6 +28,7 @@ namespace Donut.Blocks
             {
                 inputFile = Path.Combine(Environment.CurrentDirectory, inputFile);
             }
+
             _inputFileName = inputFile;
             MappedItems = new Dictionary<string, string[]>();
             if (map) ReadData();
@@ -45,9 +44,9 @@ namespace Donut.Blocks
             var _reader = new StreamReader(_fs);
             var _csvReader = new CsvReader(_reader, true, Delimiter);
             if (_inputMapper != null)
-            { 
+            {
                 foreach (var row in _csvReader)
-                { 
+                {
                     MappedItems[_inputMapper(row)] = row;
                 }
             }
@@ -58,6 +57,7 @@ namespace Donut.Blocks
                     CacheItems.Add(row);
                 }
             }
+
             _fs.Close();
         }
 
@@ -76,17 +76,19 @@ namespace Donut.Blocks
             string[] matchingRow = null;
             if (_entityKeyResolver != null && MappedItems.Count > 0)
             {
-                var entityKey = _entityKeyResolver(intDoc); 
+                var entityKey = _entityKeyResolver(intDoc);
                 matchingRow = MappedItems.ContainsKey(entityKey) ? MappedItems[entityKey] : null;
             }
             else
             {
                 matchingRow = FindMatchingEntry(intDoc);
             }
+
             if (matchingRow != null)
-            { 
-                _joiner(matchingRow, intDoc); 
+            {
+                _joiner(matchingRow, intDoc);
             }
+
             return intDoc;
         }
 
@@ -106,9 +108,10 @@ namespace Donut.Blocks
             if (_joiner == null)
             {
                 throw new Exception("Data joiner is not set!");
-            } 
+            }
+
             foreach (var row in CacheItems)
-            { 
+            {
                 var isMatch = _matcher(row, doc);
                 if (isMatch)
                 {
@@ -116,13 +119,14 @@ namespace Donut.Blocks
                 }
             }
 
-            return null;     
+            return null;
         }
 
         public void SetEntityRelation(Func<string[], IntegratedDocument, bool> func)
         {
             _matcher = func;
         }
+
         /// <summary>
         /// 
         /// </summary>

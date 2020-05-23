@@ -7,7 +7,6 @@ using System.Threading;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization;
 using MongoDB.Driver;
-using Netlyt.Interfaces;
 
 namespace Donut.Data.Format
 {

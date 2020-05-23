@@ -1,6 +1,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
+using Donut.Interfaces.Models;
 using Donut.Models;
-using Netlyt.Interfaces.Models;
+
 
 namespace Donut.Data
 {

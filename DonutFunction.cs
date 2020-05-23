@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.IO;
 using System.Linq.Expressions;
 using MongoDB.Bson;
-using Netlyt.Interfaces;
+using Donut.Interfaces;
 using Newtonsoft.Json;
 using ParameterExpression = Donut.Lex.Expressions.ParameterExpression;
 namespace Donut
@@ -142,8 +142,8 @@ namespace Donut
             if (!string.IsNullOrEmpty(GroupValue)) return GroupValue;
             return null;
         }
-
-        public virtual int GetHashCode()
+        //was virtual
+        public override int GetHashCode()
         {
             var content = GetValue();
             return content.GetHashCode();

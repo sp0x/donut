@@ -1,4 +1,4 @@
-﻿using Netlyt.Interfaces.Models;
+﻿using Donut.Interfaces.Models;
 
 namespace Donut.Orion
 {

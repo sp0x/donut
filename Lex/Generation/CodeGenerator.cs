@@ -6,8 +6,6 @@ using System.Reflection;
 using System.Text;
 using Donut.Lex.Expressions;
 
-//using Netlyt.Service.Lex.Templates;
-
 namespace Donut.Lex.Generation
 {
     /// <summary>

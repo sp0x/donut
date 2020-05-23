@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using Donut.Lex.Data;
 using Donut.Parsing.Tokens;
-using Netlyt.Interfaces;
+using Donut.Interfaces;
 
 namespace Donut.Parsing.Tokenizers
 {
