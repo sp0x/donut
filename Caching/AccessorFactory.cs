@@ -2,7 +2,7 @@
 using System.Reflection;
 using Donut;
 
-namespace nvoid.db.Caching
+namespace Donut.Caching
 {
     public abstract class AccessorFactory<TAccessor>
         where TAccessor : class
